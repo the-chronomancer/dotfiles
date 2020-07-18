@@ -1,0 +1,59 @@
+# This assumes you have the following installed:
+# aws-cli, bat, fd, git, ncdu, npm, prettyping, tldr
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias .......="cd ../../../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+alias d="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias r="cd ~/Repositories/"
+
+# This references function 'md' in .functions file
+alias bta="md /tmp/blowthisaway"
+
+# Better GNU Utils
+alias cat="bat"
+alias du="ncdu"
+alias find="fd"
+alias man="tldr"
+alias ping="prettyping --nolegend"
+alias top="htop -d 1"
+
+# Perms and execution
+alias chmad="chmod 777"
+alias chmox="chmod +x"
+
+# Print the Top 3 CPU Consumers
+alias cpu="ps aux | sort -nr -k 3 | head -3"
+
+# Print the Top 3 Memory Consumers
+alias mem="ps aux | sort -nr -k 4 | head -3"
+
+# Deactivate current virtual environment
+alias deac="deactivate"
+
+# Git commands
+alias g="git"
+alias gc="git clone"
+
+# Shell History
+alias h="history"
+
+# Background Jobs
+alias j="jobs"
+
+# Speedtest CLI
+alias speedtest="curl -s -k https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
+# Current AWS Role
+alias role="aws sts get-caller-identity --output text"
+
+# Update System
+alias update="echo -e '\033[0;32mUpdating Manjaro System Packages...\033[0m'; sudo pacman -Syu; echo; echo -e '\033[0;32mUpdating NPM Runtime & Packages...\033[0m'; sudo npm install npm -g; sudo npm update -g"

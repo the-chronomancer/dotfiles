@@ -1,0 +1,14 @@
+bat
+fd
+ncdu
+hexyl
+nodejs
+npm
+dnsutils
+python-pip
+prettyping
+tldr
+bash-completion
+aws-cli
+git
+gnutls
