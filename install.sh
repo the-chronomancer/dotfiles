@@ -2,7 +2,7 @@
 
 printf "Moving dotfiles to the home directory..\n"
 
-for file in .{aliases,functions}; do
+for file in .{aliases,bash_profile,functions}; do
     cp "$file" ~/"$file";
     printf "Moving "$file"..\n"
 done;
